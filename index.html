@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portal de Notícias — Programação</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Meu Portal de Notícias</h1>
+        <p class="cabecalho__subtitulo">Programação, Experiências e Cotidiano</p>
+
+        <nav aria-label="Navegação principal">
+            <ul class="menu">
+                <li><a class="menu__link" href="./index.html" aria-current="page">Programação</a></li>
+                <li><a class="menu__link" href="./hobbies.html">Hobbies</a></li>
+                <li><a class="menu__link" href="./perfil.html">Sobre Mim</a></li>
+                <li><a class="menu__link" href="./contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container pagina-inicial">
+        <section class="publicacoes" aria-label="Publicações recentes">
+            <article class="publicacao">
+                <span class="tag">Desenvolvimento Web I</span>
+                <h2 class="publicacao__titulo">
+                    Como uma página de perfil tornou-se um Portal de Notícias
+                </h2>
+                <p class="publicacao__resumo">
+                    Estrutura, semântica, páginas e links internos.
+                </p>
+
+                <figure class="publicacao__figura">
+                    <img
+                        class="publicacao__imagem"
+                        src="./img/noticias/desenvolvimento-web.jpg"
+                        alt="Estrada em meio a uma floresta densa ao amanhecer"
+                    >
+                    <figcaption class="publicacao__legenda">
+                        A aprendizagem em Desenvolvimento Web acontece por etapas!
+                    </figcaption>
+                </figure>
+
+                <div class="publicacao__rodape">
+                    <p class="publicacao__data">
+                        Publicado em
+                        <time datetime="2026-08-21T21:06">21 de agosto de 2026 às 21:06</time>
+                    </p>
+                    <a class="publicacao__link" href="./noticias/noticia-html.html">Ler mais...</a>
+                </div>
+            </article>
+
+            <article class="publicacao">
+                <span class="tag">Banco de Dados</span>
+                <h2 class="publicacao__titulo">
+                    Do papel ao MySQL: modelando o primeiro banco de dados
+                </h2>
+                <p class="publicacao__resumo">
+                    Entidades, relacionamentos e as primeiras tabelas.
+                </p>
+
+                <figure class="publicacao__figura">
+                    <img
+                        class="publicacao__imagem"
+                        src="./img/noticias/banco-dados.jpg"
+                        alt="Tela de computador com código e diagramas de dados"
+                    >
+                    <figcaption class="publicacao__legenda">
+                        Um bom modelo de dados sustenta toda a aplicação.
+                    </figcaption>
+                </figure>
+
+                <div class="publicacao__rodape">
+                    <p class="publicacao__data">
+                        Publicado em
+                        <time datetime="2026-08-28T20:15">28 de agosto de 2026 às 20:15</time>
+                    </p>
+                    <a class="publicacao__link" href="./noticias/noticia-banco-dados.html">Ler mais...</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Meu Portal de Notícias — Projeto acadêmico de Desenvolvimento Web.</p>
+    </footer>
+</body>
+</html>

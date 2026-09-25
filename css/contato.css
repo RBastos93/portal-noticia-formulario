@@ -1,0 +1,66 @@
+.contato {
+    padding: 2rem 0 1rem;
+}
+
+.contato .linha-dupla {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contato .linha-dupla .campo {
+    flex: 1 1 220px;
+}
+
+.campo-range {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.campo-range input[type="range"] {
+    flex: 1;
+    accent-color: var(--cor-primaria);
+}
+
+.campo-range output {
+    min-width: 2.5rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--raio-pequeno);
+    background-color: var(--cor-primaria-clara);
+    color: var(--cor-primaria);
+    font-weight: 700;
+    text-align: center;
+}
+
+.campo input[type="color"] {
+    width: 4rem;
+    height: 2.75rem;
+    padding: 0.2rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-pequeno);
+    background-color: var(--cor-branco);
+    cursor: pointer;
+}
+
+.campo input[type="file"] {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px dashed var(--cor-borda);
+    border-radius: var(--raio-pequeno);
+    background-color: var(--cor-branco);
+    cursor: pointer;
+}
+
+.campo input[type="file"]:focus-visible,
+.campo input[type="range"]:focus-visible,
+.campo input[type="color"]:focus-visible {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+    .cartao-form {
+        padding: 1.25rem;
+    }
+}

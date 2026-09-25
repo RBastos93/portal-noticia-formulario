@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portal de Notícias — Hobbies</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/hobbies.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Meu Portal de Notícias</h1>
+        <p class="cabecalho__subtitulo">Programação, Experiências e Cotidiano</p>
+
+        <nav aria-label="Navegação principal">
+            <ul class="menu">
+                <li><a class="menu__link" href="./index.html">Programação</a></li>
+                <li><a class="menu__link" href="./hobbies.html" aria-current="page">Hobbies</a></li>
+                <li><a class="menu__link" href="./perfil.html">Sobre Mim</a></li>
+                <li><a class="menu__link" href="./contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container hobbies">
+        <section class="hobbies__intro">
+            <h2>Meus hobbies</h2>
+            <p>
+                Aqui reúno as atividades que fazem parte da minha rotina fora do
+                mundo da programação. Elas ajudam a relaxar e a manter o equilíbrio!
+            </p>
+        </section>
+
+        <section class="galeria" aria-label="Atividades da rotina">
+            <h3 class="galeria__titulo">Atividades que fazem parte da minha rotina</h3>
+
+            <article class="cartao">
+                <figure>
+                    <img src="./img/hobbies/futebol.jpg" alt="Pessoas jogando futebol em um campo">
+                    <figcaption>Futebol com os amigos no fim de semana.</figcaption>
+                </figure>
+                <div class="cartao__conteudo">
+                    <h4>Futebol</h4>
+                    <p>Um clássico para descontrair depois de uma semana de estudos.</p>
+                </div>
+            </article>
+
+            <article class="cartao">
+                <figure>
+                    <img src="./img/hobbies/basquete.jpg" alt="Quadra de basquete com bola">
+                    <figcaption>Basquete para treinar agilidade e foco.</figcaption>
+                </figure>
+                <div class="cartao__conteudo">
+                    <h4>Basquete</h4>
+                    <p>Uma partida rápida ajuda a recarregar as energias.</p>
+                </div>
+            </article>
+
+            <article class="cartao">
+                <figure>
+                    <img src="./img/hobbies/corrida.jpg" alt="Pessoa correndo ao ar livre">
+                    <figcaption>Corrida matinal para começar bem o dia.</figcaption>
+                </figure>
+                <div class="cartao__conteudo">
+                    <h4>Corrida</h4>
+                    <p>Uma boa maneira de manter a saúde e a disposição.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="cartao-form" aria-labelledby="titulo-sugestao">
+            <span class="tag">Participação</span>
+            <h3 id="titulo-sugestao" class="cartao-form__titulo">Sugira um novo tema ou atividade</h3>
+            <p class="cartao-form__descricao">
+                Tem uma ideia de hobby ou assunto que gostaria de ver por aqui? Conte para mim!
+            </p>
+
+            <form class="form" action="#" method="post">
+                <div class="campo">
+                    <label class="campo__rotulo" for="nome-sugestao">Nome</label>
+                    <input
+                        type="text"
+                        id="nome-sugestao"
+                        name="nome"
+                        minlength="3"
+                        maxlength="60"
+                        required
+                        placeholder="Digite seu nome"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label class="campo__rotulo" for="tema">Tema ou hobby sugerido</label>
+                    <input
+                        type="text"
+                        id="tema"
+                        name="tema"
+                        minlength="3"
+                        maxlength="80"
+                        required
+                        placeholder="Ex.: Fotografia, culinária, xadrez..."
+                    >
+                </div>
+
+                <div class="campo">
+                    <label class="campo__rotulo" for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione um assunto</option>
+                        <option value="musica">Música</option>
+                        <option value="cinema">Cinema</option>
+                        <option value="esportes">Esportes</option>
+                        <option value="jogos">Jogos</option>
+                        <option value="leitura">Leitura</option>
+                        <option value="tecnologia">Tecnologia</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+
+                <fieldset>
+                    <legend>Quais conteúdos você gostaria de ver sobre o tema?</legend>
+                    <div class="opcoes">
+                        <label class="opcao">
+                            <input type="checkbox" name="interesses" value="videos">
+                            Conteúdo em vídeo
+                        </label>
+                        <label class="opcao">
+                            <input type="checkbox" name="interesses" value="recomendacoes">
+                            Recomendações
+                        </label>
+                        <label class="opcao">
+                            <input type="checkbox" name="interesses" value="tutoriais">
+                            Tutoriais
+                        </label>
+                        <label class="opcao">
+                            <input type="checkbox" name="interesses" value="curiosidades">
+                            Curiosidades
+                        </label>
+                        <label class="opcao">
+                            <input type="checkbox" name="interesses" value="eventos">
+                            Eventos
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="campo">
+                    <label class="campo__rotulo" for="comentario-sugestao">Comentário</label>
+                    <textarea
+                        id="comentario-sugestao"
+                        name="comentario"
+                        minlength="10"
+                        maxlength="400"
+                        required
+                        placeholder="Explique por que esse tema seria interessante"
+                    ></textarea>
+                    <span class="campo__ajuda">Escreva entre 10 e 400 caracteres.</span>
+                </div>
+
+                <div class="form__acoes">
+                    <button class="botao botao--secundario" type="reset">Limpar</button>
+                    <button class="botao botao--primario" type="submit">Enviar sugestão</button>
+                </div>
+            </form>
+
+            <p class="aviso">
+                Este formulário possui finalidade didática. As sugestões ainda não são
+                armazenadas, pois não estamos utilizando JavaScript ou backend.
+            </p>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Meu Portal de Notícias — Projeto acadêmico de Desenvolvimento Web.</p>
+    </footer>
+</body>
+</html>

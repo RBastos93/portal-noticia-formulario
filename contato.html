@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portal de Notícias — Contato</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/contato.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Meu Portal de Notícias</h1>
+        <p class="cabecalho__subtitulo">Programação, Experiências e Cotidiano</p>
+
+        <nav aria-label="Navegação principal">
+            <ul class="menu">
+                <li><a class="menu__link" href="./index.html">Programação</a></li>
+                <li><a class="menu__link" href="./hobbies.html">Hobbies</a></li>
+                <li><a class="menu__link" href="./perfil.html">Sobre Mim</a></li>
+                <li><a class="menu__link" href="./contato.html" aria-current="page">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container contato">
+        <section class="cartao-form" aria-labelledby="titulo-contato">
+            <span class="tag">Fale comigo</span>
+            <h2 id="titulo-contato" class="cartao-form__titulo">Entre em contato</h2>
+            <p class="cartao-form__descricao">
+                Preencha o formulário abaixo para enviar uma mensagem, sugestão ou dúvida.
+            </p>
+
+            <form class="form" action="#" method="post" enctype="multipart/form-data">
+
+                <div class="campo">
+                    <label class="campo__rotulo" for="nome">Nome</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        minlength="3"
+                        maxlength="60"
+                        required
+                        placeholder="Digite seu nome completo"
+                    >
+                </div>
+
+                <div class="linha-dupla">
+                    <div class="campo">
+                        <label class="campo__rotulo" for="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            placeholder="voce@exemplo.com"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label class="campo__rotulo" for="telefone">Telefone</label>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            pattern="[0-9()+\- ]{8,20}"
+                            placeholder="(00) 90000-0000"
+                        >
+                        <span class="campo__ajuda">Apenas números, espaços e os símbolos ( ) + -</span>
+                    </div>
+                </div>
+
+                <div class="linha-dupla">
+                    <div class="campo">
+                        <label class="campo__rotulo" for="site">Site ou portfólio</label>
+                        <input
+                            type="url"
+                            id="site"
+                            name="site"
+                            placeholder="https://seu-site.com"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label class="campo__rotulo" for="nascimento">Data de nascimento</label>
+                        <input
+                            type="date"
+                            id="nascimento"
+                            name="nascimento"
+                            max="2026-12-31"
+                        >
+                    </div>
+                </div>
+
+                <div class="linha-dupla">
+                    <div class="campo">
+                        <label class="campo__rotulo" for="idade">Idade</label>
+                        <input
+                            type="number"
+                            id="idade"
+                            name="idade"
+                            min="12"
+                            max="120"
+                            step="1"
+                            placeholder="Ex.: 18"
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label class="campo__rotulo" for="cor">Cor favorita</label>
+                        <input
+                            type="color"
+                            id="cor"
+                            name="cor"
+                            value="#1e3a8a"
+                        >
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label class="campo__rotulo" for="interesse">Nível de interesse pelo portal</label>
+                    <div class="campo-range">
+                        <input
+                            type="range"
+                            id="interesse"
+                            name="interesse"
+                            min="0"
+                            max="10"
+                            step="1"
+                            value="5"
+                            oninput="nivelInteresse.value = this.value"
+                        >
+                        <output id="nivelInteresse" for="interesse">5</output>
+                    </div>
+                    <span class="campo__ajuda">Arraste de 0 (pouco) a 10 (muito).</span>
+                </div>
+
+                <fieldset>
+                    <legend>Forma de contato preferida</legend>
+                    <div class="opcoes">
+                        <label class="opcao">
+                            <input type="radio" name="forma-contato" value="email" checked>
+                            E-mail
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="forma-contato" value="telefone">
+                            Telefone
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="forma-contato" value="whatsapp">
+                            WhatsApp
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Assuntos de interesse</legend>
+                    <div class="opcoes">
+                        <label class="opcao">
+                            <input type="checkbox" name="assuntos" value="programacao">
+                            Programação
+                        </label>
+                        <label class="opcao">
+                            <input type="checkbox" name="assuntos" value="banco-de-dados">
+                            Banco de Dados
+                        </label>
+                        <label class="opcao">
+                            <input type="checkbox" name="assuntos" value="seguranca">
+                            Segurança de Redes
+                        </label>
+                        <label class="opcao">
+                            <input type="checkbox" name="assuntos" value="hobbies">
+                            Hobbies
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="campo">
+                    <label class="campo__rotulo" for="mensagem">Mensagem</label>
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        minlength="10"
+                        maxlength="600"
+                        required
+                        placeholder="Escreva sua mensagem"
+                    ></textarea>
+                    <span class="campo__ajuda">Escreva entre 10 e 600 caracteres.</span>
+                </div>
+
+                <div class="campo">
+                    <label class="campo__rotulo" for="anexo">Anexo (opcional)</label>
+                    <input
+                        type="file"
+                        id="anexo"
+                        name="anexo"
+                        accept=".png,.jpg,.jpeg,.pdf"
+                    >
+                    <span class="campo__ajuda">Formatos aceitos: PNG, JPG, JPEG ou PDF.</span>
+                </div>
+
+                <div class="form__acoes">
+                    <button class="botao botao--secundario" type="reset">Limpar</button>
+                    <button class="botao botao--primario" type="submit">Enviar mensagem</button>
+                </div>
+            </form>
+
+            <p class="aviso">
+                Este formulário possui finalidade didática. Para armazenar as mensagens e
+                arquivos, será necessário conectá-lo a um servidor.
+            </p>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Meu Portal de Notícias — Projeto acadêmico de Desenvolvimento Web.</p>
+    </footer>
+</body>
+</html>

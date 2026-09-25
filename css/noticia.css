@@ -1,0 +1,112 @@
+.materia {
+    padding: 2rem 0 1rem;
+}
+
+.materia__artigo {
+    padding: 2rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    background-color: var(--cor-branco);
+    box-shadow: var(--sombra);
+    margin-bottom: 2rem;
+}
+
+.materia__titulo {
+    margin: 1rem 0 0.5rem;
+    color: var(--cor-primaria);
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.materia__subtitulo {
+    color: var(--cor-texto-suave);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.materia__figura {
+    margin: 1.5rem 0;
+}
+
+.materia__imagem {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: var(--raio-pequeno);
+}
+
+.materia__legenda {
+    padding: 0.6rem 1rem;
+    background-color: #f1f1f1;
+    color: var(--cor-texto-suave);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.materia__conteudo p {
+    margin-bottom: 1rem;
+}
+
+.materia__data {
+    display: block;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--cor-borda);
+    color: var(--cor-texto-suave);
+    font-size: 0.85rem;
+}
+
+.avaliacao-estrelas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.avaliacao-estrelas .opcao {
+    padding: 0.55rem 0.9rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-pequeno);
+    background-color: var(--cor-branco);
+}
+
+.avaliacao-estrelas .estrelas {
+    color: var(--cor-estrela);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.avaliacao-estrelas .opcao input {
+    accent-color: var(--cor-primaria);
+}
+
+.materia__voltar {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.materia__voltar:hover {
+    text-decoration: underline;
+}
+
+.materia__voltar:focus-visible {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+    .materia__artigo {
+        padding: 1.25rem;
+    }
+
+    .materia__titulo {
+        font-size: 1.5rem;
+    }
+
+    .materia__imagem {
+        height: 220px;
+    }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do papel ao MySQL: modelando o primeiro banco de dados</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/noticia.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Meu Portal de Notícias</h1>
+        <p class="cabecalho__subtitulo">Programação, Experiências e Cotidiano</p>
+
+        <nav aria-label="Navegação principal">
+            <ul class="menu">
+                <li><a class="menu__link" href="../index.html">Programação</a></li>
+                <li><a class="menu__link" href="../hobbies.html">Hobbies</a></li>
+                <li><a class="menu__link" href="../perfil.html">Sobre Mim</a></li>
+                <li><a class="menu__link" href="../contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container materia">
+        <a class="materia__voltar" href="../index.html">&larr; Voltar para a página inicial</a>
+
+        <article class="materia__artigo">
+            <span class="tag">Banco de Dados</span>
+
+            <h2 class="materia__titulo">
+                Do papel ao MySQL: modelando o primeiro banco de dados
+            </h2>
+            <p class="materia__subtitulo">
+                Entidades, relacionamentos e as primeiras tabelas.
+            </p>
+
+            <figure class="materia__figura">
+                <img
+                    class="materia__imagem"
+                    src="../img/noticias/banco-dados.jpg"
+                    alt="Tela de computador exibindo código e diagramas de dados"
+                >
+                <figcaption class="materia__legenda">
+                    Um bom modelo de dados sustenta toda a aplicação.
+                </figcaption>
+            </figure>
+
+            <div class="materia__conteudo">
+                <p>
+                    Antes de escrever qualquer comando SQL, desenhamos no papel as
+                    <strong>entidades</strong> do sistema e como elas se relacionam.
+                    Esse modelo conceitual evita retrabalho e deixa claro o que cada
+                    tabela precisa armazenar.
+                </p>
+                <p>
+                    Em seguida, transformamos o modelo em tabelas no <strong>MySQL</strong>,
+                    definindo chaves primárias, chaves estrangeiras e os tipos de dados
+                    mais adequados para cada coluna. Um <code>INT</code> para identificadores,
+                    <code>VARCHAR</code> para textos curtos e <code>DATE</code> para datas.
+                </p>
+                <p>
+                    Com as tabelas prontas, inserimos alguns registros de teste e
+                    escrevemos consultas simples com <code>SELECT</code> para conferir
+                    se os relacionamentos estavam corretos.
+                </p>
+                <p>
+                    O aprendizado principal foi perceber que a modelagem é uma etapa de
+                    planejamento: quanto melhor o desenho, mais simples fica manter e
+                    evoluir a aplicação no futuro.
+                </p>
+
+                <time class="materia__data" datetime="2026-08-28T20:15">
+                    Publicado em 28 de agosto de 2026 às 20:15
+                </time>
+            </div>
+        </article>
+
+        <section class="cartao-form" aria-labelledby="titulo-avaliacao">
+            <span class="tag">Participação</span>
+            <h3 id="titulo-avaliacao" class="cartao-form__titulo">Avalie esta publicação</h3>
+            <p class="cartao-form__descricao">
+                Compartilhe sua opinião e informe quanto o conteúdo despertou seu interesse.
+            </p>
+
+            <form class="form" action="#" method="post">
+                <div class="campo">
+                    <label class="campo__rotulo" for="nome-avaliacao">Nome</label>
+                    <input
+                        type="text"
+                        id="nome-avaliacao"
+                        name="nome"
+                        minlength="3"
+                        maxlength="60"
+                        required
+                        placeholder="Digite seu nome"
+                    >
+                </div>
+
+                <fieldset>
+                    <legend>Qual é o seu interesse pela matéria?</legend>
+                    <div class="avaliacao-estrelas">
+                        <label class="opcao">
+                            <input type="radio" name="nota" value="1" required>
+                            <span class="estrelas">&#9733;</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="nota" value="2">
+                            <span class="estrelas">&#9733;&#9733;</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="nota" value="3">
+                            <span class="estrelas">&#9733;&#9733;&#9733;</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="nota" value="4">
+                            <span class="estrelas">&#9733;&#9733;&#9733;&#9733;</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="nota" value="5">
+                            <span class="estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="campo">
+                    <label class="campo__rotulo" for="comentario-avaliacao">Comentário</label>
+                    <textarea
+                        id="comentario-avaliacao"
+                        name="comentario"
+                        minlength="10"
+                        maxlength="500"
+                        required
+                        placeholder="Escreva seu comentário sobre a matéria"
+                    ></textarea>
+                    <span class="campo__ajuda">O comentário deve possuir entre 10 e 500 caracteres.</span>
+                </div>
+
+                <div class="form__acoes">
+                    <button class="botao botao--secundario" type="reset">Limpar</button>
+                    <button class="botao botao--primario" type="submit">Salvar avaliação</button>
+                </div>
+            </form>
+
+            <p class="aviso">
+                Este formulário possui finalidade didática. O armazenamento das avaliações
+                será implementado posteriormente.
+            </p>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Meu Portal de Notícias — Projeto acadêmico de Desenvolvimento Web.</p>
+    </footer>
+</body>
+</html>
